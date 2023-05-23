@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<script type="text/javascript" src="assets/bibtex_js.mod.js"></script>
+
+<!-- DATA -->
+{{ content }}
+
+<!-- FORMATTING -->
+<div class="bibtex_structure">
+    <div class="group year" extra="DESC number">
+        <div class="templates"> </div>
+    </div>
+</div>
+
+<!-- FILTER / SEARCH -->
+<select class="bibtex_search bibtex_generate_author" search="author">
+    <option value="">Search Author</option>
+</select>
+<select class="bibtex_search bibtex_generate_year" search="year">
+    <option value="">Search Year</option>
+</select>
+<input type="text" class="bibtex_search" id="searchbar" placeholder="Search publications">
+
+<!-- CONTENT -->
+<div id="bibtex_display"></div>

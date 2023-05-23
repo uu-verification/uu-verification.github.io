@@ -1,0 +1,91 @@
+body {
+	font-family: sans-serif;
+	color: #333;
+}
+
+#main {
+	max-width: 1280px;
+	margin: auto;
+}
+
+#header {
+	display: flex;
+}
+
+#header img {
+	flex: 0 0 auto;
+	width: 96px;
+}
+
+#header h1 {
+	flex: 1 1 auto;
+	text-align: center;
+	font-variant: small-caps;
+}
+
+#body {
+	display: flex;
+	align-items: flex-start;
+}
+
+#nav {
+	flex: 0 0 auto;
+	display: flex;
+	flex-direction: column;
+	width: 256px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-left: -10000px;
+	padding-left: 10000px;
+	background-color: #EEE;
+}
+
+#nav a {
+	margin-left: -4rem;
+	padding-left: 4rem;
+	line-height: 2rem;
+	text-decoration: none;
+	color: inherit;
+}
+
+#nav a.sub {
+	font-size: smaller;
+	padding-left: 5rem;
+}
+
+#nav a:hover {
+	background-color: #FFF;
+	border-right: 0.5rem solid #DDD;
+}
+
+#nav a.active {
+	background-color: #BBB;
+	border-right: 0.5rem solid #333;
+	font-weight: bolder;
+}
+
+#content {
+	flex: 1 1 auto;
+	padding: 1rem;
+}
+
+#footer-left, #footer-right {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-repeat: no-repeat;
+	background-size: 320px;
+	z-index: -1;
+}
+
+#footer-left {
+	background-image: url(https://live.webb.uu.se/digitalAssets/207/c_207717-l_3-k_bg-anno-1477.png);
+	background-position: bottom left;
+}
+
+#footer-right {
+	background-image: url(https://static.uu.se/designsystem/latest/theme-uu/img/gray+alpha_sigill.svg);
+	background-position: bottom right;
+}
