@@ -14,6 +14,9 @@ layout: default
     </div>
 </div>
 
+{% capture title %}# Publications{% endcapture %}
+{{ title | markdownify }}
+
 <!-- FILTER / SEARCH -->
 <select class="bibtex_search bibtex_generate_author" search="author">
     <option value="">Search Author</option>
