@@ -2,5 +2,5 @@
 layout: default
 ---
 
-### Parosh Aziz Abdulla
-Chaired Professor
+# Parosh Aziz Abdulla
+**Chaired Professor**

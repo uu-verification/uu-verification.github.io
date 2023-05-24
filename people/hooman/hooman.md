@@ -2,5 +2,5 @@
 layout: default
 ---
 
-### Hooman Asadian
-PhD Student
+# Hooman Asadian
+**PhD Student**
