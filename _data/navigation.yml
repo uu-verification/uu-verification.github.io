@@ -1,0 +1,22 @@
+- title: Home
+  href: index.html
+
+- title: Parosh Aziz Abdulla
+  href: people/parosh/parosh.html
+  sublinks:
+    - title: Publications
+      href: people/parosh/publications.html
+
+- title: Hooman Asadian
+  href: people/hooman/hooman.html
+  sublinks:
+    - title: Publications
+      href: people/hooman/publications.html
+
+- title: Stephan Spengler
+  href: people/stephan/stephan.html
+  sublinks:
+    - title: TSO Games
+      href: people/stephan/tso_games.html
+    - title: Publications
+      href: people/stephan/publications.html

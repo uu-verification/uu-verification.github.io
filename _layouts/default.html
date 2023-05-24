@@ -4,13 +4,9 @@
 <head>
     <meta charset="UTF-8">
 
-    <base href="/" />
-
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-    <script src="assets/script.js"></script>
+    <base href="/uu-verification.github.io/" />
 
     <link rel="stylesheet" href="assets/style.css">
-
     <link rel="shortcut icon" href="assets/uu-logo.ico">
 </head>
 
@@ -21,16 +17,21 @@
             <h1>UU Verification Group</h1>
         </div>
         <div id="body">
-            <div id="nav">
-                <a href="index.html">Home</a>
-                <a href="people/parosh/parosh.html">Parosh Aziz Abdulla</a>
-                <a href="people/parosh/publications.html" class="sub">↪ Publications</a>
-                <a href="people/hooman/hooman.html">Hooman Asadian</a>
-                <a href="people/hooman/publications.html" class="sub">↪ Publications</a>
-                <a href="people/stephan/stephan.html">Stephan Spengler</a>
-                <a href="people/stephan/tso_games.html" class="sub">↪ TSO Games</a>
-                <a href="people/stephan/publications.html" class="sub">↪ Publications</a>
-            </div>
+            <nav id="nav">
+                {% assign href = page.url | remove_first: "/" %}
+
+                {% for node in site.data.navigation %}
+                <a href="{{node.href}}" {% if href==node.href %}class="active" {% endif %} title="{{node.title}}">{{node.title}}</a>
+
+                {% assign temp = node.href | prepend: "/" | remove_first: page.dir %}
+                {% unless temp contains "/" %}
+                {% for sub in node.sublinks %}
+                <a href="{{sub.href}}" class="sub {% if href == sub.href %}active{% endif %}" title="{{sub.title}}">↪ {{sub.title}}</a>
+                {% endfor %}
+                {% endunless %}
+
+                {% endfor %}
+            </nav>
             <div id="content">
                 {{ content }}
             </div>
